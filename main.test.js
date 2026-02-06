@@ -7,3 +7,7 @@ test("capitalize 1st character", () => {
 test("reverse a string", () => {
   expect(testFunctions.reverseString("developer")).toMatch("repoleved");
 });
+
+test("calculate sum", () => {
+  expect(testFunctions.calculator.add(3, 7)).toBe(10);
+});
