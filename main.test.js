@@ -1,5 +1,9 @@
-const capitalize = require("./main");
+const testFunctions = require("./main");
 
 test("capitalize 1st character", () => {
-  expect(capitalize("developer")).toMatch("Developer");
+  expect(testFunctions.capitalize("developer")).toMatch("Developer");
+});
+
+test("reverse a string", () => {
+  expect(testFunctions.reverseString("developer")).toMatch("repoleved");
 });

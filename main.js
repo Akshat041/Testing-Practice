@@ -5,4 +5,12 @@ function capitalize(str) {
   return initial.concat(remainingStr);
 }
 
-module.exports = capitalize;
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+reverseString("developer");
+module.exports = {
+  capitalize,
+  reverseString,
+};
