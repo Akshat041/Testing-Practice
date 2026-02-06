@@ -1,5 +1,5 @@
-const sum = require("./main");
+const capitalize = require("./main");
 
-test("adds 1 + 2 to equal 3", () => {
-  expect(sum(1, 2)).toBe(3);
+test("capitalize 1st character", () => {
+  expect(capitalize("developer")).toMatch("Developer");
 });
