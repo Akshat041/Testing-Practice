@@ -24,8 +24,53 @@ const calculator = {
   },
 };
 
+function caesarCipher(text, key) {
+  // const alphabet = [a,b,c, d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,z];
+  const alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  const txtArr = [...text];
+  const res = "";
+
+  const cipherText = txtArr
+    .map((char) => {
+      return res + alphabet[(alphabet.indexOf(char) + key) % 26];
+    })
+    .join("");
+
+  return cipherText;
+}
+
+// console.log(caesarCipher("xyz", 3));
+
 module.exports = {
   capitalize,
   reverseString,
   calculator,
+  caesarCipher,
 };

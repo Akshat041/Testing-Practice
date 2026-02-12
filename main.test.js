@@ -23,3 +23,7 @@ test("calculate division", () => {
 test("calculate multiplication", () => {
   expect(testFunctions.calculator.mul(3, 7)).toBe(21);
 });
+
+test("plaintext encryption", () => {
+  expect(testFunctions.caesarCipher("xyz", 3)).toBe("abc");
+});
