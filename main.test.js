@@ -27,3 +27,7 @@ test("calculate multiplication", () => {
 test("plaintext encryption", () => {
   expect(testFunctions.caesarCipher("xyz", 3)).toBe("abc");
 });
+
+test("preserving test case", () => {
+  expect(testFunctions.caesarCipher("HeLLo", 3)).toBe("KhOOr");
+});

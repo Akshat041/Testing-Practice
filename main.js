@@ -56,10 +56,20 @@ function caesarCipher(text, key) {
   ];
   const txtArr = [...text];
   const res = "";
+  let flag = 0;
 
   const cipherText = txtArr
     .map((char) => {
-      return res + alphabet[(alphabet.indexOf(char) + key) % 26];
+      if (char === char.toUpperCase()) {
+        flag = 1;
+        char = char.toLowerCase();
+      } else {
+        flag = 0;
+      }
+
+      return flag == 1
+        ? res + alphabet[(alphabet.indexOf(char) + key) % 26].toUpperCase()
+        : res + alphabet[(alphabet.indexOf(char) + key) % 26].toLowerCase();
     })
     .join("");
 
