@@ -60,6 +60,22 @@ function caesarCipher(text, key) {
 
   const cipherText = txtArr
     .map((char) => {
+      if (
+        char === "." ||
+        char === "," ||
+        char === " " ||
+        char === "?" ||
+        char === "!" ||
+        char === ":" ||
+        char === ";" ||
+        char === "'" ||
+        char === "-" ||
+        char === "_" ||
+        char === "(" ||
+        char === ")"
+      ) {
+        return res + char;
+      }
       if (char === char.toUpperCase()) {
         flag = 1;
         char = char.toLowerCase();
