@@ -31,3 +31,9 @@ test("plaintext encryption", () => {
 test("preserving test case", () => {
   expect(testFunctions.caesarCipher("HeLLo", 3)).toBe("KhOOr");
 });
+
+test("Test Punctuation", () => {
+  expect(testFunctions.caesarCipher("(Hello, World!", 3)).toBe(
+    "(Khoor, Zruog!",
+  );
+});
