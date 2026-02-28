@@ -1,4 +1,5 @@
 const testFunctions = require("./main");
+const caesarCipher = require("./caesar-cipher");
 
 test("capitalize 1st character", () => {
   expect(testFunctions.capitalize("developer")).toMatch("Developer");
@@ -25,17 +26,15 @@ test("calculate multiplication", () => {
 });
 
 test("plaintext encryption", () => {
-  expect(testFunctions.caesarCipher("xyz", 3)).toBe("abc");
+  expect(caesarCipher("xyz", 3)).toBe("abc");
 });
 
 test("preserving test case", () => {
-  expect(testFunctions.caesarCipher("HeLLo", 3)).toBe("KhOOr");
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
 });
 
 test("Test Punctuation", () => {
-  expect(testFunctions.caesarCipher("(Hello, World!", 3)).toBe(
-    "(Khoor, Zruog!",
-  );
+  expect(caesarCipher("(Hello, World!", 3)).toBe("(Khoor, Zruog!");
 });
 
 const object = testFunctions.analyzeArray([1, 8, 3, 4, 2, 6]);
